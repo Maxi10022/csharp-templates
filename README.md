@@ -1,6 +1,6 @@
 # Introduction
 
-This is a template repository with different opinionated csharp templates setup to get started immediatly. 
+This is a template repository with different opinionated csharp templates setup **web-apis** to get started immediatly. 
 
 # Setup/Usage
 
