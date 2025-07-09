@@ -1,0 +1,42 @@
+﻿@using Template.Api.Branding
+@model Template.Api.Users.Emails.Templates.ConfirmationLinkEmail
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Confirm Your Email - @Model.Branding.CompanyName</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { background-color: @Model.Branding.PrimaryColor; color: white; padding: 20px; text-align: center; }
+        .content { padding: 20px; background-color: #f9f9f9; }
+        .button { display: inline-block; padding: 12px 24px; background-color: #4A90E2; color: white !important; text-decoration: none; border-radius: 4px; margin: 20px 0; }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #666; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        @if (Model.Branding.LogoUrl is not null)
+        {
+            <img style="height: 80px; width: auto;" src="@Model.Branding.LogoUrl" alt="Logo"/>
+        }
+        <h1>@Model.Branding.CompanyName</h1>
+    </div>
+    <div class="content">
+        <h2>Confirm Your Email Address</h2>
+        <p>Thank you for signing up with @Model.Branding.CompanyName! To complete your registration, please confirm your email address by clicking the button below:</p>
+            
+        <div style="text-align: center;">
+            <a href="@Model.ConfirmationLink" class="button">Confirm Email Address</a>
+        </div>
+            
+        <p>If you did not create an account with FluentFormBuilder, you can safely ignore this email.</p>
+    </div>
+    <div class="footer">
+        <p>@Model.Branding.Copyright. All rights reserved.</p>
+        <p>This is an automated message, please do not reply to this email.</p>
+    </div>
+</div>
+</body>
+</html>
